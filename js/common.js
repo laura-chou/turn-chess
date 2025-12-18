@@ -72,7 +72,7 @@ export const convertToBool = (value) => {
   return value.toLowerCase() === "true" || value === "1";
 };
 
-export const redirectToHome  = (isRedirect = true) => {
+export const redirectToHome = (isRedirect = true) => {
   removeStorage();
   if (isRedirect) {
     window.location.href = pathName;
@@ -88,7 +88,6 @@ export const serverError = async (isRedirect) => {
     showConfirmButton: false,
     allowOutsideClick: false,
     willClose: () => {
-      removeStorage()
       redirectToHome(isRedirect)
     }
   });

@@ -39,17 +39,17 @@ const getPlayerHtml = (players, showScore) => {
 
 const getInfoHtml = (datas, showScore) => {
   let info = "";
-  if (datas.length > 0) {
-    for (const data of datas) {
-      info += `<tr class="${getClass(data.rank)}">
-                <td>${getRank(data.rank)}</td>
-                <td style="position:relative;">
-                  ${getPlayerHtml(data.players, showScore)}
-                </td>
-                <td>${data.spentTime}</td>
-              </tr>`;
-    }
+
+  for (const data of datas) {
+    info += `<tr class="${getClass(data.rank)}">
+              <td>${getRank(data.rank)}</td>
+              <td style="position:relative;">
+                ${getPlayerHtml(data.players, showScore)}
+              </td>
+              <td>${data.spentTime}</td>
+            </tr>`;
   }
+
   return info;
 };
 
