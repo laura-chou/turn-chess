@@ -2,8 +2,8 @@ import { removeStorage } from "./store.js";
 
 const getPathName = () => {
   let path = "/";
-  if (window.location.pathname.includes("turn_chess")) {
-    path = "/turn_chess/";
+  if (window.location.pathname.includes("turn-chess")) {
+    path = "/turn-chess/";
   }
   return path;
 }
